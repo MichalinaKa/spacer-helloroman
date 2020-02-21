@@ -9,7 +9,7 @@
         <p class="description">{{description}}</p>
       </div>
     </div>
-    <div class="close" @click="$emit('closeModel')" />
+    <div class="close" @click="$emit('closeModal')" />
   </div>
 </template>
 
