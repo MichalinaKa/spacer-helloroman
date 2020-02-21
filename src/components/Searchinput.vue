@@ -16,13 +16,10 @@ export default {
 
 <style lang="scss" scoped>
 .searchWrapper {
-  width: 100%;
+  width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 30px;
-  width: 100%;
+  margin-top: 50px;
 }
 .search {
   display: flex;
@@ -31,14 +28,28 @@ export default {
 }
 label {
   text-align: center;
-  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: rgb(247, 217, 247);
 }
 
 input {
+  color: white;
+  text-align: center;
+  font-size: 15px;
   background: none;
-
   height: 40px;
   border: 0;
   border-bottom: 1px solid white;
+  transition: box-shadow 0.5s;
+  @media (min-width: 1024px) {
+    font-size: 25px;
+  }
+}
+
+input:focus {
+  background: none;
+  outline: none;
+  box-shadow: 0 15px 20px -8px white;
 }
 </style>
