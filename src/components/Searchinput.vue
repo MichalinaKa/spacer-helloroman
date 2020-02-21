@@ -1,16 +1,26 @@
 <template>
   <div class="searchWrapper">
-    <Claim />
     <div class="search">
       <label for="search">Search</label>
-      <input v-model="searchValue" name="search" id="search" type="text" @input="handleInput" />
+      <input name="search" id="search" :value="value" @input="handleChange" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Searchinput"
+  name: "Searchinput",
+  props: {
+    value: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    handleChange(e) {
+      this.$emit("input", e.target.value);
+    }
+  }
 };
 </script>
 
