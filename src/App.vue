@@ -56,6 +56,7 @@ export default {
       this.modalOpen = true;
       this.modalItem = item;
     },
+
     handleInput: debounce(function() {
       this.loading = true;
       console.log(this.searchValue);
@@ -88,20 +89,20 @@ body {
   padding: 0;
 }
 .wrapper {
+  margin: 0;
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 30px;
   width: 100%;
-  height: 100vh;
   &.flexStart {
     justify-content: flex-start;
   }
 }
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.8s ease;
