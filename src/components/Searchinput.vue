@@ -2,7 +2,7 @@
   <div class="searchWrapper">
     <div class="search">
       <label for="search">Search</label>
-      <input name="search" id="search" :value="value" @input="handleChange" />
+      <input name="search" id="search" :class="{dark}" :value="value" @input="handleChange" />
     </div>
   </div>
 </template>
@@ -14,6 +14,10 @@ export default {
     value: {
       type: String,
       required: true
+    },
+    dark: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -40,7 +44,6 @@ label {
   text-align: center;
   margin-bottom: 10px;
   font-size: 2em;
-  color: rgb(247, 217, 247);
 }
 
 input {
@@ -61,5 +64,14 @@ input:focus {
   background: none;
   outline: none;
   box-shadow: 0 15px 20px -8px white;
+}
+
+.dark {
+  color: #1e3d4a;
+  border-bottom: 1px solid #1e3d4a;
+}
+.dark:focus {
+  outline: none;
+  box-shadow: 0 15px 20px -8px #1e3d4a;
 }
 </style>
