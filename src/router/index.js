@@ -9,14 +9,8 @@ const routes = [
     path: "/",
     name: "Search",
     component: Search
-  },
-  {
-    path: "/about",
-    name: "About",
-
-    component: () =>
-      import("../views/About.vue")
   }
+
 ];
 
 const router = new VueRouter({
