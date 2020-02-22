@@ -30,7 +30,7 @@ import Heroimage from "@/components/Heroimage.vue";
 import Item from "@/components/Item.vue";
 import Modal from "@/components/Modal.vue";
 
-const API = "https://images-api.nasa.gov";
+const API = "https://images-api.nasa.gov/search";
 
 export default {
   name: "App",
@@ -61,7 +61,7 @@ export default {
       this.loading = true;
       console.log(this.searchValue);
       axios
-        .get(`${API}/search?q=${this.searchValue}&media_type=image`)
+        .get(`${API}?q=${this.searchValue}&media_type=image`)
         .then(response => {
           this.results = response.data.collection.items;
           this.loading = false;

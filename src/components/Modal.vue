@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 .outerWrapper {
   color: black;
+  border: 4px solid black;
   background-color: rgba(255, 255, 255, 1);
   height: 100%;
   max-width: 100%;
@@ -95,19 +96,19 @@ export default {
   flex-direction: column;
   @media (min-width: 1024px) {
     flex-direction: row;
-
     .photo {
-      min-width: 50%;
+      max-width: 50%;
       margin-right: 20px;
     }
   }
   .photo {
-    width: 100%;
+    width: 90%;
     height: auto;
     background: black;
 
     img {
-      width: 100%;
+      width: 90%;
+      object-fit: cover;
     }
   }
 }
